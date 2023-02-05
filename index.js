@@ -2,7 +2,7 @@ const startQuiz = document.querySelector(".start-btn")
 const quizRules = document.querySelector(".quiz__rules--container")
 const startQuizQuestion = document.querySelector(".quiz__rules--start")
 const quizQuestion = document.querySelector(".quiz__question--container")
-const quitQuiz = document.querySelector(".quiz__rules--quit")
+const quitQuiz = quizQuestion.querySelector(".quiz__rules--quit")
 const scoreBoard = document.querySelector(".score__container")
 const restartQuiz = document.querySelector(".restart__button")
 
@@ -101,7 +101,13 @@ startQuizQuestion.addEventListener("click", function() {
 quitQuiz.addEventListener("click", function() {
 
    quizQuestion.classList.toggle("active")
-
+   startQuiz.classList.toggle("active")
+   quest = 1
+   answerOne.textContent= questionArray[0].options[0]
+   answerTwo.textContent= questionArray[0].options[1]
+   answerThree.textContent= questionArray[0].options[2]
+   answerFour.textContent= questionArray[0].options[3]
+ theQuestion.textContent = questionArray[0].question
 })
 
 
